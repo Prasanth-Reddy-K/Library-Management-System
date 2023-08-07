@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library Management</title>
+ <meta charset="utf-8">
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+ </script>
+ <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+ </script>
+  <style>
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    .slideshow-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <script>
+    // Get all the slide images
+    var slides = document.getElementsByClassName("slide");
+
+    // Set the index of the currently displayed slide
+    var currentSlideIndex = 0;
+
+    // Function to show the next slide
+    function showNextSlide() {
+      // Hide the current slide
+      slides[currentSlideIndex].style.display = "none";
+
+      // Increment the index
+      currentSlideIndex++;
+
+      // Wrap around to the first slide if necessary
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      }
+
+      // Show the next slide
+      slides[currentSlideIndex].style.display = "block";
+    }
+
+    // Call the showNextSlide function every 3 seconds
+    setInterval(showNextSlide, 3000);
+  </script>
+ 
+</head>
+<body>
+ <nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+ <div class="navbar-header">
+ <a class="navbar-brand">Library</a>
+ </div>
+ <ul class="nav navbar-nav">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="operations.html">Options</a></li>
+ <li><a href="about.html">About Library</a></li>
+ <li><a href="contact.html">Contact Us</a></li>
+ </ul>
+ <ul class="nav navbar-nav navbar-right">
+ <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> 
+Sign Up</a></li>
+ <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> 
+Login</a></li>
+ </ul>
+ </div>
+ </nav>
+ <h1 color="White" align = "middle"  color="blue"><b>Library Management System</b></h1>
+ <div class="slideshow-container">
+    <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxm_o6gRUqmNhyahtxsf7LUV4BFLLLHvVEHw&usqp=CAU">
+    <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP8FfdXJ4TS9QGKi1hprQzh3fMKjoK1433PQ&usqp=CAU">
+    <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfol1CjGXbjjmdqUSuowv7SiTGjdoxg08V5w&usqp=CAU">
+  </div>
+</body>
+</html>
